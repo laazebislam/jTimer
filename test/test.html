@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css' />
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        
+        .container {
+            width: 88%;
+            margin: auto;
+        }
+        
+        .page-header {
+            color: #fff;
+            text-align: center;
+            background-color: #159957;
+            background-image: linear-gradient(120deg, #155799, #159957);
+            padding: 5rem 6rem;
+        }
+        
+        .project-name {
+            margin-top: 0;
+            margin-bottom: 0.1rem;
+            font-size: 3.25rem;
+        }
+        
+        .project-tagline {
+            margin-bottom: 2rem;
+            font-weight: normal;
+            opacity: 0.7;
+            font-size: 1.25rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 0.3rem;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+            padding: 0.75rem 1rem;
+        }
+        
+        a {
+            color: #1e6bb8;
+            text-decoration: none;
+        }
+        
+        .main-content h1,
+        .main-content h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: normal;
+            color: #159957;
+        }
+        
+        .main-content h1 {
+            padding-top: 40px;
+        }
+        
+        .main-content h2 {
+            color: #222;
+        }
+        
+        .main-content pre {
+            padding: 0.8rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font: 1rem monospace;
+            color: #567482;
+            background-color: #f3f6fa;
+            border: solid 1px #dce6f0;
+            border-radius: 0.3rem;
+            text-align: left;
+            overflow-x: auto;
+        }
+        
+        .site-footer {
+            padding: 1rem 2rem 3rem;
+            margin-top: 2rem;
+            border-top: solid 1px #d2d2d2;
+            line-height: 1.8;
+        }
+        
+        .main-content :first-child {
+            margin-top: 0;
+        }
+        
+        .site-footer-owner {
+            display: block;
+            font-weight: bold;
+        }
+        
+        .site-footer-credits {
+            color: #819198;
+        }
+        
+        .function {
+            color: #1e6bb8;
+        }
+        
+        .variable {
+            color: #9B2C34;
+        }
+        
+        .string {
+            color: #8AB972;
+        }
+        
+        .comment {
+            color: #b0afaf;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="page-header">
+        <h1 class="project-name">jTimer</h1>
+        <h2 class="project-tagline">It's a jquery plugin for time</h2>
+        <a href="https://github.com/laazebislam/jTimer" class="btn">View on GitHub</a>
+    </section>
+    <div class="container">
+        <div class="main-content">
+            <h1> Test Case : </h1>
+            <h2>- index.html</h2>
+            <pre><code><span class="variable">&lt;body&gt;</span>
+<span class="variable">&lt;p</span> <span class="function">class</span>=<span class="string">"heure"</span><span class="variable">&gt;&lt;/p&gt;</span> <span class="comment">// we will test on this element</span>
+<span class="variable">&lt;/body&gt;</span>
+<span class="variable">&lt;script</span> <span class="function">src</span>=<span class="string">&#039;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&#039;</span><span class="variable">&gt;&lt;/script&gt;</span>
+<span class="variable">&lt;script</span> <span class="function">src</span>=<span class="string">&quot;jtimer.min.js&quot;</span><span class="variable">&gt;&lt;/script&gt;</span>
+<span class="variable">&lt;script</span> <span class="function">src</span>=<span class="string">&quot;test.js&quot;</span><span class="variable">&gt;&lt;/script&gt;</span>
+        </code></pre>
+            <h2>- test.js</h2>
+            <pre>var <span class="variable">dom</span> = $(<span class="string">".heure"</span>);
+<span class="variable">dom</span>.<span class="function">jTimer</span>();
+</pre>
+            <h2>- Output</h2>
+            <pre><p class="heure"></p>
+</pre>
+        </div>
+    </div>
+</body>
+<footer class="site-footer">
+    <span class="site-footer-owner"><a href="https://github.com/laazebislam/jTimer">jTimer</a> is maintained by <a href="https://github.com/laazebislam">laazebislam</a>.</span>
+    <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src="jtimer.min.js"></script>
+<script src="test.js"></script>
+
+</html>

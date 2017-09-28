@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css' />
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        
+        .container {
+            width: 88%;
+            margin: auto;
+        }
+        
+        .page-header {
+            color: #fff;
+            text-align: center;
+            background-color: #159957;
+            background-image: linear-gradient(120deg, #155799, #159957);
+            padding: 5rem 6rem;
+        }
+        
+        .project-name {
+            margin-top: 0;
+            margin-bottom: 0.1rem;
+            font-size: 3.25rem;
+        }
+        
+        .project-tagline {
+            margin-bottom: 2rem;
+            font-weight: normal;
+            opacity: 0.7;
+            font-size: 1.25rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 0.3rem;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+            padding: 0.75rem 1rem;
+        }
+        
+        a {
+            color: #1e6bb8;
+            text-decoration: none;
+        }
+        
+        .main-content h1 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: normal;
+            color: #159957;
+        }
+        
+        .main-content h1 {
+            padding: 40px 0;
+        }
+        
+        .main-content h2 {
+            color: #222;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            font-weight: 400;
+            padding: 25px 0;
+        }
+        
+        .main-content pre {
+            padding: 0.8rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font: 1rem monospace;
+            color: #567482;
+            background-color: #f3f6fa;
+            border: solid 1px #dce6f0;
+            border-radius: 0.3rem;
+            text-align: left;
+            overflow-x: auto;
+        }
+        
+        .site-footer {
+            padding: 1rem 2rem 3rem;
+            margin-top: 2rem;
+            border-top: solid 1px #d2d2d2;
+            line-height: 1.8;
+        }
+        
+        .main-content :first-child {
+            margin-top: 0;
+        }
+        
+        .site-footer-owner {
+            display: block;
+            font-weight: bold;
+        }
+        
+        .site-footer-credits {
+            color: #819198;
+        }
+        
+        .function {
+            color: #1e6bb8;
+        }
+        
+        .variable {
+            color: #9B2C34;
+        }
+        
+        .string {
+            color: #8AB972;
+        }
+        
+        .comment {
+            color: #b0afaf;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="page-header">
+        <h1 class="project-name">jTimer</h1>
+        <h2 class="project-tagline">It's a jquery plugin for time</h2>
+        <a href="https://laazebislam.github.io/jTimer/" class="btn">View on GitHub</a>
+    </section>
+    <div class="container">
+        <div class="main-content">
+            <h1> Documentation : </h1>
+            <h2> Formates Dates </h2>
+            <pre><code><span class="comment">// dom is a variable contain the selection of element with jQuery $() </span>
+            
+<span class="variable">dom</span>.<span class="function">jTimer</span>();   ==> <span id="1"></span>   <span class="comment">// Default langage is ARABIC</span>
+<span class="variable">dom</span>.<span class="function">jTimer</span>({ format:<span class="string">"%hh:%mm:%ss"</span> });   ==> <span id="2"></span>
+<span class="variable">dom</span>.<span class="function">jTimer</span>({ format:<span class="string">"%d/%m/%y"</span> });   ==> <span id="3"></span>
+<span class="variable">dom</span>.<span class="function">jTimer</span>({ format:<span class="string">"%hh:%mm:%ss %D %d %M %y"</span> });   ==> <span id="4"></span>
+
+<span class="comment">/* -------------------------------------------------------- English -------------------------------------------------------- */</span>
+<span class="variable">dom</span>.<span class="function">jTimer</span>({ format:<span class="string">"%D %d %M %y %hh:%mm:%ss"</span>, lang:<span class="string">"en"</span> });   ==> <span id="5"></span>
+<span class="variable">dom</span>.<span class="function">jTimer</span>({ format:<span class="string">"%DD %d %MM %y %hh:%mm:%ss"</span>, lang:<span class="string">"en"</span> });   ==> <span id="6"></span>
+
+<span class="comment">/* -------------------------------------------------------- Use AM/PM -------------------------------------------------------- */</span>
+<span class="variable">dom</span>.<span class="function">jTimer</span>({ format:<span class="string">"%D %d %M %y %hh:%mm"</span>, lang:<span class="string">"en"</span> , ampm:<span class="string">true</span> });   ==> <span id="7"></span>
+<span class="variable">dom</span>.<span class="function">jTimer</span>({ format:<span class="string">"%DD %d %MM %y %hh:%mm:%ss"</span>, lang:<span class="string">"en"</span>, ampm:<span class="string">true</span> });   ==> <span id="8"></span>
+
+
+</code></pre>
+            <h2> Date Customisation </h2>
+            <pre><code><span class="comment">/* -------------------------------------------------------- Add language -------------------------------------------------------- */</span>
+<span class="variable">dom</span>.<span class="function">jTimer</span>({
+format:<span class="string">"%D %d %M %y %hh:%mm"</span>, 
+change:<span class="string">true</span>, 
+monthArray: [<span class="string">"month1", "month2", "month3", "month4", "month5", "month6", "month7", "month8", "month9", "month10", "month11", "month12"]</span>,
+dayArray: [<span class="string">"day1", "day2", "day3", "day4", "day5", "day6", "day7"]</span>
+});   ==>   <span id="9"></span>
+
+<span class="variable">dom</span>.<span class="function">jTimer</span>({<span class="comment">// we can specify the long od short day and week by shift propertie</span>
+    format: "<span class="string">%DD %d %MM %y %hh:%mm:%ss"</span>,
+    change: <span class="string">true</span>,
+    monthArray: [<span class="string">"month1", "month2", "month3", "month4", "month5", "month6", "month7", "month8", "month9", "month10", "month11", "month12"]</span>,
+    dayArray: [<span class="string">"day1", "day2", "day3", "day4", "day5", "day6", "day7"]</span>,
+    shift:<span class="string">3</span>
+});    ==>  <span id="10"></span>
+
+
+</code></pre>
+        </div>
+    </div>
+</body>
+<footer class="site-footer">
+    <span class="site-footer-owner"><a href="https://laazebislam.github.io/jTimer/">jTimer</a> is maintained by <a href="https://github.com/laazebislam">laazebislam</a>.</span>
+</footer>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js'></script>
+<script src="https://cdn.rawgit.com/laazebislam/jTimer/a9b2e8bd/dist/jTimer.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#1").jTimer();
+        $("#2").jTimer({
+            format: "%hh:%mm:%ss"
+        });
+        $("#3").jTimer({
+            format: "%d/%m/%y"
+        });
+        $("#4").jTimer({
+            format: "%hh:%mm:%ss %D %d %M %y"
+        });
+        $("#5").jTimer({
+            format: "%D %d %M %y %hh:%mm:%ss",
+            lang: "en"
+        });
+        $("#6").jTimer({
+            format: "%DD %d %MM %y %hh:%mm:%ss",
+            lang: "en"
+        });
+        $("#7").jTimer({
+            format: "%D %d %M %y %hh:%mm",
+            lang: "en",
+            ampm: true
+        });
+        $("#8").jTimer({
+            format: "%DD %d %MM %y %hh:%mm:%ss",
+            lang: "en",
+            ampm: true
+        });
+        $("#9").jTimer({
+            format: "%D %d %M %y %hh:%mm:%ss",
+            change: true,
+            monthArray: ["month1", "month2", "month3", "month4", "month5", "month6", "month7", "month8", "month9", "month10", "month11", "month12"],
+            dayArray: ["day1", "day2", "day3", "day4", "day5", "day6", "day7"]
+        });
+        $("#10").jTimer({
+            format: "%DD %d %MM %y %hh:%mm:%ss",
+            change: true,
+            monthArray: ["month1", "month2", "month3", "month4", "month5", "month6", "month7", "month8", "month9", "month10", "month11", "month12"],
+            dayArray: ["day1", "day2", "day3", "day4", "day5", "day6", "day7"],
+            shift: 3
+        });
+    });
+</script>
+
+</html>

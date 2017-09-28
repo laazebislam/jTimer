@@ -1,0 +1,42 @@
+{
+  "name": "jtimer",
+  "version": "1.1.2",
+  "description": "jquery plugin that control the time with a structure like strftime and with a high perfomance.",
+  "main": "dist/jtimer.min.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "connect": "^3.6.5",
+    "jquery": "^1.12.4",
+    "open": "^0.0.5",
+    "server-static": "^2.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laazebislam/jTimer.git"
+  },
+  "files": [
+    "dist",
+    "test",
+    "demo"
+  ],
+  "keywords": [
+    "jtimer",
+    "jquery-plugin",
+    "time",
+    "time",
+    "plugin",
+    "timer"
+  ],
+  "author": "laazeb islam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laazebislam/jTimer/issues"
+  },
+  "homepage": "https://laazebislam.github.io/jTimer/"
+}
